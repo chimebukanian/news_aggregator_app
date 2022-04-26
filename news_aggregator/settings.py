@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-27@9=*81m%o^z7
 DEBUG = os.environ.get('DJANGO_DEBUG', '')!='False'
 
 
-ALLOWED_HOSTS = ['headllinenews.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['headlinenews.herokuapp.com','127.0.0.1']
 
 
 
