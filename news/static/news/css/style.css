@@ -1,0 +1,126 @@
+.jumbotron {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 20%;
+}
+
+.container {
+    position: absolute;
+    top: 23%;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar-nav {
+        padding-top: 15px;
+    }
+    .sidebar-nav a {
+        font-size: 18px;
+    }
+}
+
+.welcome {
+    color: rgb(0, 153, 255);
+    position: relative;
+    left: 24px;
+}
+
+.centre_btn {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.centre_btn .service {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    min-width: 100%;
+}
+
+.centre_btn button {
+    height: 20%;
+    width: 20%;
+}
+
+.centre_btn button a {
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    background: green;
+}
+
+.service .service-1 {
+    margin-bottom: 15px;
+}
+
+.service .service-2 {
+    margin-top: 0;
+}
+
+body {
+    background: rgb(19, 18, 18);
+}
+
+.sidebar_nav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    list-style-type: none;
+}
+
+.sidebar_nav li {
+    margin-left: 12px;
+}
+
+.sidebar_nav li a {
+    color: rgb(0, 153, 255);
+}
+
+form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border: 2px solid whitesmoke;
+    padding: 20px;
+}
+
+.about {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    font-weight: bold;
+    color: white;
+}

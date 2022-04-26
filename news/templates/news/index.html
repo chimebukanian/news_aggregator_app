@@ -1,0 +1,17 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+    <div class="container" style="color:white"> 
+    <h1><u>All current news updates:</u></h1>
+      {% for new, des, i, url, time in mylist %} 
+              <img src="{{ i }}" width="45%" height="100%" height alt="{{ new }}"> 
+              <h1>news:</h1> {{ new }} 
+              {{ value|linebreaks }} 
+              <h4>description:</h4>{{ des }}<a href="{{ url }}"><b> news link</b></a>
+              {{ value|linebreaks }} 
+              <h4>date and time published: </h4>{{time}}
+              <hr>
+              
+      {% endfor %} 
+    </div> 
+{% endblock %}

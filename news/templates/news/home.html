@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+{% block content %}
+<div class='centre_btn'>
+<h1 id="service" class="service">
+    <p class=service-1>welcome to Topheadlines website</p>
+    <p class="service-2">get top news headlines from around the world</p>
+</h1>
+<button><a class='order' href='{% url "news:index" %}'>Get Headlines</a></button>
+</div>
+{% endblock %}
