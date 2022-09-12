@@ -6,7 +6,7 @@ import datetime
 def index(request):
       today=str(datetime.date.today())
       newsapi=NewsApiClient(api_key='9403f36e77fa4baab4908c80df509015')
-      top=newsapi.get_top_headlines(language='en')
+      top=newsapi.get_top_headlines(language='en', pageSize=100)
     
       all=top['articles']
       desc=[]
