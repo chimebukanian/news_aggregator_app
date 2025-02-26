@@ -1,50 +1,45 @@
-<!DOCTYPE html> 
-<html lang="en" dir="ltr"> 
-  <head> 
-    <meta charset="utf-8"> 
-    <title>top news feed</title> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top News Feed</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'news/css/style.css' %}">
-    <script src="{% static 'news/js/joski.js' %}"></script>
+    <script src="{% static 'news/js/joski.js' %}" defer></script>
 </head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'news:home' %}">HeadlineNews</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'news:home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'news:index' %}">Headlines</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'news:about' %}">About</a></li>
+                    <li class="nav-item">
+                        <button id="darkModeToggle" class="btn btn-outline-light">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<body onload=" formanim(); anim();">
-    <div class="jumbotron" style="color:black"> 
-      <h1 style ="color:white">
-        HeadlineNews
-      </h1> 
-        
-        {% block sidebar %}
-                    <ul class="sidebar_nav">
-                        <li><a href="{% url 'news:home' %}">Home</a></li>
-                        <li><a href="{% url 'news:index' %}">Headlines</a></li>
-                        <li><a href="{% url 'news:about' %}">About</a></li>
+    <!-- Main Content -->
+    <div class="container mt-5 pt-4">
+        {% block content %}{% endblock %}
+    </div>
 
-                    </ul>
-        {% endblock %}
-    </div> 
-    {% block content %}{% endblock %}
-                    {% block pagination %}
-                        {% if is_paginated %}
-                            <div class="pagination">
-                                <span class="page-links">
-                                    {% if page_obj.has_previous %}
-                                        <a href="{{ request.path }}?path={{ page_obj.previous_page_nummber }}">&#10094</a>
-                                    {% endif %}
-                                    <span class="page-current">
-                                        Page{{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-                                    </span>
-                                    {% if page_obj.has_next %}
-                                        <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">&#10095</a>
-                                    {% endif %}
-                                </span>
-                            </div>
-                        {% endif %}
-                    {% endblock %}
-    <footer>
-        &copy; news services 2022.
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-white mt-5">
+        &copy; News Services 2025
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
