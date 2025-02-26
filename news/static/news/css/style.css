@@ -1,126 +1,64 @@
-.jumbotron {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 20%;
-}
-
-.container {
-    position: absolute;
-    top: 23%;
-}
-
-@media screen and (max-height: 450px) {
-    .sidebar-nav {
-        padding-top: 15px;
-    }
-    .sidebar-nav a {
-        font-size: 18px;
-    }
-}
-
-.welcome {
-    color: rgb(0, 153, 255);
-    position: relative;
-    left: 24px;
-}
-
-.centre_btn {
-    position: absolute;
-    top: 50%;
-    left: 37%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-}
-
-a {
-    text-decoration: none;
-}
-
-.centre_btn .service {
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    position: relative;
-    min-width: 100%;
-}
-
-.centre_btn button {
-    height: 20%;
-    width: 20%;
-}
-
-.centre_btn button a {
-    text-decoration: none;
-    border: 2px solid white;
-    border-radius: 20px;
-    color: white;
-    background: green;
-}
-
-.service .service-1 {
-    margin-bottom: 15px;
-}
-
-.service .service-2 {
-    margin-top: 0;
-}
-
+/* General Styles */
 body {
-    background: rgb(19, 18, 18);
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s, color 0.3s;
 }
 
-.sidebar_nav {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    list-style-type: none;
+.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
-.sidebar_nav li {
-    margin-left: 12px;
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-.sidebar_nav li a {
-    color: rgb(0, 153, 255);
+/* Navbar */
+.navbar {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    border: 2px solid whitesmoke;
+/* Main Content */
+.container {
+    max-width: 900px;
+    margin: auto;
     padding: 20px;
 }
 
-.about {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+/* Headings */
+h1, h2, h3 {
+    font-weight: 600;
 }
 
+/* News Items */
+.news-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dark-mode .news-item {
+    background: #1e1e1e;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: max-content;
-    font-weight: bold;
+    padding: 15px;
+    margin-top: 20px;
+    background: #343a40;
     color: white;
 }
