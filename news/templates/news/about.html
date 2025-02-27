@@ -1,12 +1,22 @@
-{% extends 'news/base.html' %}
+{% extends "base.html" %}
+
+{% block title %}About - HeadlineNews 📰{% endblock %}
+
 {% block content %}
+<div class="container text-center mt-5">
+    <h1>About <span class="text-primary">HeadlineNews</span> 📰</h1>
+    
+    <p class="lead">In a fast-paced world, staying informed shouldn't feel overwhelming.</p>
+    
+    <p><strong>HeadlineNews</strong> brings you the <strong>most important news stories</strong> from across the globe 🌍, in a <strong>clear, concise, and easy-to-read format</strong>.</p>
 
-<div class='about'>
-<h1>About us</h1>
-<hr style="background:white;">
+    <h3>🔹 Why Choose HeadlineNews?</h3>
+    <ul class="list-unstyled">
+        <li>✅ <strong>Curated Summaries</strong> – No fluff, just the facts.</li>
+        <li>✅ <strong>Global Reach</strong> – Stay connected to events from all corners of the world.</li>
+        <li>✅ <strong>Always Updated</strong> – We fetch fresh headlines, so you're never behind.</li>
+    </ul>
 
-<p>
- app enables one get top headlines from around the world, utilizing the newsapi.org 's API.
-</p>
+    <p class="mt-4"><strong>📢 Your news, simplified. Stay ahead—<a href="{% url 'news_feed' %}">start reading now!</a></strong></p>
 </div>
 {% endblock %}
