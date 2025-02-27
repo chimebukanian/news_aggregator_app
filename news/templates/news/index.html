@@ -1,17 +1,22 @@
 {% extends 'news/base.html' %}
 
 {% block content %}
-    <div class="container" style="color:white"> 
-    <h1><u>All current news updates:</u></h1>
-      {% for new, des, i, url, time in mylist %} 
-              <img src="{{ i }}" width="45%" height="100%" height alt="{{ new }}"> 
-              <h1>news:</h1> {{ new }} 
-              {{ value|linebreaks }} 
-              <h4>description:</h4>{{ des }}<a href="{{ url }}"><b> news link</b></a>
-              {{ value|linebreaks }} 
-              <h4>date and time published: </h4>{{time}}
-              <hr>
-              
-      {% endfor %} 
-    </div> 
+<div class="container my-4">
+    <h1 class="text-center text-light"><u>📰 All Current News Updates 🌍</u></h1>
+    <div class="row">
+        {% for new, des, i, url, time in mylist %}
+            <div class="col-md-6 mx-auto my-3">
+                <div class="card bg-dark text-white shadow-lg">
+                    <img src="{{ i }}" class="card-img-top img-fluid" alt="{{ new }}">
+                    <div class="card-body">
+                        <h4 class="card-title">📰 {{ new }}</h4>
+                        <p class="card-text">{{ des }}</p>
+                        <p class="text-muted"><small>⏰ Published: {{ time }}</small></p>
+                        <a href="{{ url }}" class="btn btn-primary btn-sm" target="_blank">Read More 📖</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
