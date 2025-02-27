@@ -1,20 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleSwitch = document.getElementById('dark-mode-toggle');
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.querySelector(".dark-mode-toggle");
     const body = document.body;
 
-    // Check local storage for mode preference
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-mode');
-        toggleSwitch.checked = true;
-    }
+    // Dark Mode Toggle
+    toggleButton.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
 
-    toggleSwitch.addEventListener('change', function () {
-        if (this.checked) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-        }
+        // Store user preference
+        localStorage.setItem("dark-mode", body.classList.contains("dark-mode"));
     });
+
+    // Apply stored dark mode preference
+    if (localStorage.getItem("dark-mode") === "true") {
+        body.classList.add("dark-mode");
+    }
 });
